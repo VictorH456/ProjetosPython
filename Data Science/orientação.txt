@@ -1,0 +1,44 @@
+Classes e orientação a objetos são conceitos fundamentais da programação orientada a objetos (POO). A POO é um paradigma de programação que se baseia na ideia de que um programa é composto por objetos que interagem entre si.
+Uma classe é uma estrutura que define um conjunto de atributos e métodos que um objeto pode ter. Por exemplo, uma classe "Pessoa" pode ter atributos como nome, idade, altura, peso e métodos como andar, falar, comer. Os objetos criados a partir dessa classe são chamados de instâncias da classe "Pessoa".
+Aqui está um exemplo básico de classe em Python:
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+
+    def falar(self):
+        print(f"{self.nome} está falando.")
+
+pessoa1 = Pessoa("João", 25)
+pessoa1.falar()
+
+Nesse exemplo, criamos a classe "Pessoa" com os atributos "nome" e "idade" e o método "falar". O método `__init__` é um método especial usado para inicializar os atributos da classe. O parâmetro `self` é uma referência ao próprio objeto.
+Em seguida, criamos uma instância da classe "Pessoa" chamada "pessoa1" e atribuímos a ela os valores "João" e 25 para os atributos "nome" e "idade", respectivamente. Finalmente, chamamos o método "falar" na instância "pessoa1".
+A orientação a objetos permite que os programas sejam mais modularizados, reutilizáveis e fáceis de manter. Por exemplo, você pode criar uma classe "Animal" com atributos e métodos genéricos que se aplicam a todos os animais, e em seguida, criar classes mais específicas como "Cachorro" e "Gato" que herdam esses atributos e métodos genéricos, mas também têm suas próprias características específicas.
+Aqui está um exemplo de herança em Python:
+
+class Animal:
+    def __init__(self, nome):
+        self.nome = nome
+
+    def fazer_som(self):
+        pass
+
+class Cachorro(Animal):
+    def fazer_som(self):
+        print("Au au!")
+
+class Gato(Animal):
+    def fazer_som(self):
+        print("Miau!")
+
+cachorro1 = Cachorro("Toby")
+gato1 = Gato("Mimi")
+
+cachorro1.fazer_som()
+gato1.fazer_som()
+
+Nesse exemplo, criamos uma classe "Animal" com o atributo "nome" e o método "fazer_som". Em seguida, criamos duas classes "Cachorro" e "Gato" que herdam os atributos e métodos da classe "Animal", mas sobrescrevem o método "fazer_som" para fazer o som específico de cada animal.
+Finalmente, criamos duas instâncias das classes "Cachorro" e "Gato" e chamamos o método "fazer_som" em cada uma delas.
+Em resumo, as classes e a orientação a objetos são conceitos fundamentais da programação orientada a objetos que permitem criar programas mais modulares, reutilizáveis e fáceis de manter.
